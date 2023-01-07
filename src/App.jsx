@@ -14,7 +14,7 @@ useEffect (() =>{
 
 const getData = (query)=> {
   axios
-  .get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=gin`)
+  .get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=mojito`)
   .then((resp)=> {
     console.log(resp.data)
     setDataDrinks(resp.data)
@@ -32,7 +32,7 @@ const getData = (query)=> {
   return (
     <div className="App">
     <form  className="container-form" onSubmit={(e) => searchCharacter(e)}>
-      <input className="input" type="text" id="drink" name='drink' defaultValue={query} placeholder="Ingresar nombre de bebeda"/>
+      <input className="input" type="text" id="drink" name='drink' defaultValue={query} placeholder="Ingresa nombre del drink"/>
       <button className="button">Buscar</button>
     </form>  
     {
