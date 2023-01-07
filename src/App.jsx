@@ -14,7 +14,7 @@ useEffect (() =>{
 
 const getData = (query)=> {
   axios
-  .get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${query}`)
+  .get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=gin`)
   .then((resp)=> {
     console.log(resp.data)
     setDataDrinks(resp.data)
@@ -23,19 +23,17 @@ const getData = (query)=> {
     console.error(error)
   })
 
-  const handleSubmit = (event) => {
-    event.preventDefault(); 
-    const value = event.target[0].value
-    // console.log(value);
-    setDrink(value);
-  } 
+  const searchCharacter = (e) => {
+    e.preventDefault();
+    setQuery(e.data[0].strDrink.toLowerCase());
+  };
   
 }
   return (
     <div className="App">
-    <form onSubmit={handleSubmit}>
-      <input type="text" id="drink" name='drink' defaultValue={query} placeholder="Ingresar nombre de bebeda"/>
-      <button>Buscar</button>
+    <form  className="container-form" onSubmit={(e) => searchCharacter(e)}>
+      <input className="input" type="text" id="drink" name='drink' defaultValue={query} placeholder="Ingresar nombre de bebeda"/>
+      <button className="button">Buscar</button>
     </form>  
     {
       dataDrinks.drinks?.sort((a,b)=>{
