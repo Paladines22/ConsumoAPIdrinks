@@ -26,8 +26,7 @@ const getData = (query)=> {
   const searchCharacter = (e) => {
     e.preventDefault();
     setQuery(e.data[0].strDrink.toLowerCase());
-  };
-  
+  }; 
 }
   return (
     <div className="App">
