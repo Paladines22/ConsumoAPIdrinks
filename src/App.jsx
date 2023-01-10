@@ -2,6 +2,7 @@ import './App.css'
 import axios from 'axios'
 import {useState, useEffect} from 'react' 
 import Drink from './components/Drink'
+import Toast from './components/Toast'
 
 function App() {
 
@@ -14,20 +15,20 @@ useEffect (() =>{
 
 const getData = (query)=> {
   axios
-  .get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=mojito`)
+  .get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${query}`)
   .then((resp)=> {
     console.log(resp.data)
-    setDataDrinks(resp.data)
+    setDataDrinks(resp.data.drinks)
   })
   .catch((error)=>{
     console.error(error)
   })
-
-  const searchCharacter = (e) => {
-    e.preventDefault();
-    setQuery(e.data[0].strDrink.toLowerCase());
-  }; 
 }
+const searchCharacter = (e) => {
+  e.preventDefault();
+  const value = e.target[0].value
+  setQuery(value);
+} 
   return (
     <div className="App">
     <form  className="container-form" onSubmit={(e) => searchCharacter(e)}>
@@ -35,7 +36,9 @@ const getData = (query)=> {
       <button className="button">Buscar</button>
     </form>  
     {
-      dataDrinks.drinks?.sort((a,b)=>{
+      dataDrinks
+      ? 
+      dataDrinks.sort((a,b)=>{
         if(a.strDrink < b.strDrink){
           return -1
         }else if (a.strDrink > b.strDrink){
@@ -48,6 +51,8 @@ const getData = (query)=> {
         data={drink}/>  
         }
         )
+        :
+        <Toast/>
       } 
     </div>
   )
