@@ -37,7 +37,7 @@ const searchCharacter = (e) => {
       <br />
     <form  className="container-form" onSubmit={(e) => searchCharacter(e)}>
       <input className="input" type="text" id="drink" name='drink' defaultValue={query} placeholder="Ingresa nombre del drink"/>
-      <button className="button"><img src="./src/assets/img/buscar.png" alt="" /></button>
+      <button className="button"><img src="/buscar.png" alt="" /></button>
     </form> 
     
     {
