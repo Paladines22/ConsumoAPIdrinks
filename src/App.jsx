@@ -31,10 +31,15 @@ const searchCharacter = (e) => {
 } 
   return (
     <div className="App">
+      <div className='container-tittle'>
+      <h2 className='tittle'>International Drinks </h2>
+      </div>
+      <br />
     <form  className="container-form" onSubmit={(e) => searchCharacter(e)}>
       <input className="input" type="text" id="drink" name='drink' defaultValue={query} placeholder="Ingresa nombre del drink"/>
       <button className="button">Buscar</button>
-    </form>  
+    </form> 
+    
     {
       dataDrinks
       ? 

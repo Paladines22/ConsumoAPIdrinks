@@ -7,4 +7,16 @@
 
 .App {
   background-color: #222224;
+  display: flex;
+  flex-wrap: wrap;
+  min-height :100vh;
+}
+.container-tittle {
+  
+  margin: 0 auto;
+  margin: 100px 800px 0 700px;
+}
+.tittle{
+  color:white;
+  font-size: 70px;
 }
