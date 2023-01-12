@@ -37,8 +37,8 @@
   padding: 10px 10px;
   border-radius: 1rem;
   max-width: fit-content;
-  justify-content: space-around;
-  margin: 68px;
+  justify-content: space-between;
+  margin: 70px;
   width: 25vw;
   min-height: max-content;
   box-shadow: rgba(221, 217, 217, 0.96) 0px 5px 11px, rgba(236, 235, 235, 0.922) 0px 3px 3px;
