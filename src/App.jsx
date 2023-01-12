@@ -32,7 +32,7 @@ const searchCharacter = (e) => {
   return (
     <div className="App">
       <div className='container-tittle'>
-      <h2 className='tittle'>International Drinks 🍸</h2>
+      <h2 className='tittle'>International <br /> Drinks 🍸</h2>
       </div>
       <br />
     <form  className="container-form" onSubmit={(e) => searchCharacter(e)}>
