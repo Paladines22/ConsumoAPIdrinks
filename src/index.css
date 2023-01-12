@@ -39,7 +39,7 @@
   max-width: fit-content;
   justify-content: space-around;
   margin: 68px;
-  width: 600px;
+  width: 25vw;
   min-height: max-content;
   box-shadow: rgba(221, 217, 217, 0.96) 0px 5px 11px, rgba(236, 235, 235, 0.922) 0px 3px 3px;
   cursor: pointer;
@@ -48,7 +48,7 @@
 
 .drink-container img {
   border-radius: 1rem;
-  width: 580px;
+  width: 24vw;
   
 }
 
@@ -63,7 +63,7 @@ font-size: 25px;
 margin: 15px 20px 15px 190px;
 }
 .toast{
-  margin-top: 50px;
+  margin-top: 10vh;
   color: black;
   color:white;
 }
